@@ -1,0 +1,27 @@
+.plantilla {
+    height: 100vh;
+    width: 100vw;
+    //al contenedor maestro el grid
+    display: grid;
+    //definir 12 final
+    grid-template-rows: 2fr 9fr 1fr;
+    //definir 12 columnas
+    grid-template-columns: 12fr;
+    //definir cabeceras y pie
+    grid-template-areas: "cabecera" "cuerpo" "pie";
+}
+
+.cabecera {
+    grid-area: cabecera;
+    background-color: green;
+}
+
+.cuerpo {
+    grid-area: cuerpo;
+    background-color: grey;
+}
+
+.pie {
+    grid-area: pie;
+    background-color: blue;
+}

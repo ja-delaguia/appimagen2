@@ -1,0 +1,30 @@
+<div class="fichausuario">
+    <form [formGroup]="formuser" (submit)="submit()">
+        Nombre: <input type="text" formControlName="nombre">
+
+        <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+
+            <div *ngIf="nombre.error.required">
+                El nombre del usuario es obligatorio
+            </div>
+
+            <div *ngIf="nombre.error.minlength">
+                Nombre de usuario incorrecto, nimimo 6 caracteres
+            </div>
+        </div>
+
+        Imagen: <input type="text" formControlName="imagen">
+
+        <div *ngIf="imagen.invalid && (pass.dirty || imagen.touched)">
+
+            <div *ngIf="imagen.error.required">
+                La imagen es obligatorio
+            </div>
+
+            <div *ngIf="imagen.error.pattern">
+                La imagen tiene que cumplir los requisitos
+            </div>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
